@@ -31,10 +31,10 @@ spring:
 
   # 数据库配置
   datasource:
-    url: jdbc:mysql://localhost:3306/shenjy
+    url: jdbc:mysql://localhost:3306/test
     username: root
-    password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: org.apache.commons.dbcp.BasicDataSource
 
 
