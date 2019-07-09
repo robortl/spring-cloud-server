@@ -4,7 +4,6 @@ import com.jonas.constant.BizException;
 import com.jonas.constant.SystemCode;
 import com.jonas.entity.User;
 import com.jonas.service.UserService;
-import com.netflix.discovery.DiscoveryManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +32,7 @@ public class UserController {
      * @return
      */
     @RequestMapping("/getUser")
-    public User getUser(Long uid) {
+    public User getUser(Long uid)throws BizException {
         User user = userService.getUser(uid);
         if (null == user) {
             throw new BizException(SystemCode.NEED_AUTH);
